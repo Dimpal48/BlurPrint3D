@@ -2,6 +2,7 @@ import React from "react";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import {motion} from "framer-motion";
 
+
 function HomeAbout() {
   return (
     <>
@@ -13,10 +14,13 @@ function HomeAbout() {
               About Us
             </h1>
             <p className="text-left text-base text-slate-600 font-thin">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis.....
+            BluePrint3D have a great deal of patience and we are incredibly detail-oriented when it comes to creating dioramas,
+             3D rendering, animations, and mockups. Yet, in time, we have learned to optimize our workflow to be able to deliver
+              the best results at the right time,
+             without straying away from the vision that has defined us. 
+             This allows us to offer innovative solutions for our customers, solutions that are aimed 
+             towards the streamlining of their real estate process. Add a healthy dose of professionalism and expertise to this 
+             “recipe” and you can easily understand how we have managed to win over even the most demanding clients. 
             </p>
             <div className="flex items-center  gap-2 ">
               <button

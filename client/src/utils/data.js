@@ -1,31 +1,31 @@
 export const heroData = [
   {
     id: 1,
-    name: "video",
+    name: "Architecture",
     title: "Portfolio Title",
     imgsrc:
-      "https://getmasum.com/themes-wp/greatway/wp-content/uploads/2017/02/3-770x510.jpg",
+      "https://www.blueprintmodels.com/wp-content/uploads/2022/10/Office-Building-Scale-Model.jpg",
   },
   {
     id: 2,
-    name: "Web",
+    name: "Consultancy",
     title: "Portfolio Title",
     imgsrc:
-      "https://getmasum.com/themes-wp/greatway/wp-content/uploads/2017/02/6-770x510.jpg",
+      "https://www.blueprintmodels.com/wp-content/uploads/2022/05/Tudor-Style-House.jpg",
   },
   {
     id: 3,
-    name: "Branding",
+    name: "3D Printing",
     title: "Portfolio Title",
     imgsrc:
-      "https://getmasum.com/themes-wp/greatway/wp-content/uploads/2017/02/1-770x510.jpg",
+      "https://www.blueprintmodels.com/wp-content/uploads/2022/10/Office-Building-Scale-Model.jpg",
   },
   {
     id: 4,
-    name: "video",
+    name: "Laser cutting",
     title: "Portfolio Title",
     imgsrc:
-      "https://getmasum.com/themes-wp/greatway/wp-content/uploads/2017/02/3-770x510.jpg",
+      "https://www.blueprintmodels.com/wp-content/uploads/2022/05/Tudor-Style-House.jpg",
   },
 ];
 
@@ -42,7 +42,7 @@ export const categories = [
   },
   {
     id: 3,
-    name: "Electrical Equipment",
+    name: "Electrical",
     urlParamName: "electrical",
   },
   {
@@ -52,7 +52,7 @@ export const categories = [
   },
   {
     id: 5,
-    name: "Garbage disposals",
+    name: "Garbage ",
     urlParamName: "garbage",
   },
   {
@@ -63,7 +63,48 @@ export const categories = [
 
   {
     id: 7,
-    name: "Uncategorized",
+    name: "Uncategorize",
+    urlParamName: "uncategorized",
+  },
+];
+
+
+
+export const servicescat = [
+  {
+    id: 1,
+    name: "3DPrinted",
+    urlParamName: "3DPrinted",
+  },
+  {
+    id: 2,
+    name: " Renovation",
+    urlParamName: " renovation",
+  },
+  {
+    id: 3,
+    name: "PublicBuildings",
+    urlParamName: "publicBuildings",
+  },
+  {
+    id: 4,
+    name: "Hospitality",
+    urlParamName: "hospitality",
+  },
+  {
+    id: 5,
+    name: "Residential ",
+    urlParamName: "residential",
+  },
+  {
+    id: 6,
+    name: "Buildings",
+    urlParamName: "buildings",
+  },
+
+  {
+    id: 7,
+    name: "Uncategorize",
     urlParamName: "uncategorized",
   },
 ];

@@ -13,7 +13,7 @@ function Header() {
   const firebaseAuth = getAuth(app);
   const googleProvider = new GoogleAuthProvider();
 
-  const [{ user }, dispatch] = useStateValue();
+  const [{ user,cartShow }, dispatch] = useStateValue();
 
   const [isMenu, setIsMenu] = useState(false);
   const [isNav, setIsNav] = useState(false);
@@ -45,6 +45,13 @@ function Header() {
     });
   };
 
+  const showCart=()=>{
+    dispatch({
+      type: actionType.SET_CART_SHOW,
+      cartShow: !cartShow,
+    });
+  }
+
   return (
     <header className="fixed z-50 w-screen bg-slate-50 p-6 px-16">
       {/* {Desktop and tablets} */}
@@ -64,30 +71,30 @@ function Header() {
           exit={{ opacity: 0, x: 200 }}
           className="flex items-center gap-10 ml-auto mr-auto justify-between"
         >
-          <li className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
+          <Link to="/" className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
             Home
-          </li>
-          <li className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
+          </Link>
+          <Link to="/about" className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
             About Us
-          </li>
-          <li className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
+          </Link>
+          <Link to="/work" className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
             Work
-          </li>
-          <li className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
+          </Link>
+          <Link to="/services" className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
             Services
-          </li>
-          <li className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
+          </Link>
+          <Link to="/shopPage" className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
             Shop
-          </li>
-          <li className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
+          </Link>
+          <Link to="/blog" className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
             Blog
-          </li>
-          <li className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
+          </Link>
+          <Link to="/contact" className="text-base text-cartBg hover:text-green-500 duration-100 transition-all ease-in-out cursor-pointer">
             Contact Us
-          </li>
+          </Link>
         </motion.ul>
 
-        <div className="relative flex items-center justify-center">
+        <div className="relative flex items-center cursor-pointer justify-center" onClick={showCart}>
           <MdOutlineShoppingCart className="text-cartBg hover:text-green-500 text-2xl ml-8 cursor-pointer" />
           <div className=" absolute -top-2 right-0 w-5 h-5 rounded-full bg-green-900  hover:text-green-500 flex items-center justify-center cursor-pointer">
             <p className="text-xs text-white font-semibold">0</p>
@@ -208,35 +215,35 @@ function Header() {
                     }`}
                   >
                     <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                      <li className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
+                      <Link to="/" className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
                       onClick={()=>setIsMenu(false)}
                       >
                         Home
-                      </li>
-                      <li className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
+                      </Link>
+                      <Link to="/about"  className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
                       onClick={()=>setIsMenu(false)}>
                         About Us
-                      </li>
-                      <li className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
+                      </Link>
+                      <Link to="/work" className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
                       onClick={()=>setIsMenu(false)}>
                         Work
-                      </li>
-                      <li className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
+                      </Link>
+                      <Link to="/services" className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
                       onClick={()=>setIsMenu(false)}>
                         Services
-                      </li>
-                      <li className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
+                      </Link>
+                      <Link to="/shopPage" className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
                       onClick={()=>setIsMenu(false)}>
                         Shop
-                      </li>
-                      <li className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
+                      </Link>
+                      <Link to="/blog" className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
                       onClick={()=>setIsMenu(false)}>
                         Blog
-                      </li>
-                      <li className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
+                      </Link>
+                      <Link to="/contact" className="text-base text-slate-500 hover:text-slate-800 duration-100 transition-all ease-in-out cursor-pointer"
                       onClick={()=>setIsMenu(false)}>
                         Contact Us
-                      </li>
+                      </Link>
                     </ul>
                   </div>
                 </div>

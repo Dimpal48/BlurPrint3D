@@ -30,7 +30,8 @@ function CreateShopContainer() {
   const [alertStatus, setAlertStatus] = useState("danger");
   const [msg, setMsg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const[{ShopItems},dispatch]=useStateValue();
+  const[{shopItems},dispatch]=useStateValue();
+  console.log(shopItems);
 
   const uploadImage = (e) => {
     setIsLoading(true);
@@ -40,7 +41,7 @@ function CreateShopContainer() {
       storage,
       `ShopImages/${Date.now()}-${imageFile.name}`
     );
-    console.log(storageRef);
+    // console.log(storageRef);
     const uploadTask = uploadBytesResumable(storageRef, imageFile);
     console.log(uploadTask);
     uploadTask.on(
@@ -148,10 +149,11 @@ function CreateShopContainer() {
       await getAllShopItems().then((data)=>{
         dispatch({
           type : actionType.SET_SHOP_ITEMS,
-          ShopItems :data,
+          shopItems :data,
         })
       })
     }
+   
   
 
   return (
@@ -284,3 +286,4 @@ function CreateShopContainer() {
 }
 
 export default CreateShopContainer;
+

@@ -31,23 +31,24 @@ function HomeContainer() {
               </span>
               <span className="overflow-hidden inline-block py-8 lg:py-10 relative text-center lg:text-6xl text-2xl font-medium opacity-100 underline underline-offset-4">
                 {/* <b className="hidden ">MATERIALIZE</b> */}
-                <b className="visible">MINIMALIST</b>
+                <b className="visible">MATERIALIZE</b>
                 {/* <b className="hidden">PASSIONATE</b> */}
               </span>
             </h1>
           </p>
-          <p className="text-base text-lighttextGray font-semibold md:text-left lg:text-center  w-4/5">
-            Specialising in customer experiences brand development, we combine
-            digital craftsmanship.
+          <p className="text-base text-lighttextGray font-semibold md:text-left lg:text-center pb-10  w-4/5">
+            We are a team of idealistic architects, 3D artists, and constructors who have never ceased to play with architectural shapes and styles.  we could make something beautiful and valuable out of this passion: architectura lmodels in which the artistic elements, the geometry, and space came together naturally and wonderfully.
+
           </p>
-          <button
-            type="button"
+          <Link
+          to="/contact"
+           
             className="bg-gradient-to-br from-green-100 to-green-300 hover:from-red-300 hover:to-red-400 w-full lg:w-auto md:w-auto
       px-4 py-2 sm:my-8 md:my-10 lg:my-20 rounded-lg hover:shadow-lg transition-all ease-in-out duration-100
       text-green-600 font-semibold lg:hover:text-white md:hover:text-white  cursor-pointer"
           >
             Contact US
-          </button>
+          </Link>
         </div>
       </div>
       <div>

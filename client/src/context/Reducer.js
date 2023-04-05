@@ -1,12 +1,15 @@
 export const actionType = {
     SET_USER: "SET_USER",
     SET_SHOP_ITEMS: "SET_SHOP_ITEMS",
+    SET_SERVICES_ITEMS: "SET_SERVICES_ITEMS",
+    SET_BLOGS_ITEMS: "SET_BLOGS_ITEMS",
     SET_CART_SHOW: "SET_CART_SHOW",
     SET_CARTITEMS: "SET_CARTITEMS",
+
   };//
   
   const reducer = (state, action) => {
-    console.log(action);
+    // console.log(action);
   
     switch (action.type) {
       case actionType.SET_USER:
@@ -20,6 +23,17 @@ export const actionType = {
           ...state,
           shopItems: action.shopItems,
         };
+
+        case actionType.SET_SERVICES_ITEMS:
+          return {
+            ...state,
+            servicesItems: action.servicesItems,
+          };
+          case actionType.SET_BLOGS_ITEMS:
+          return {
+            ...state,
+            blogsItems: action.blogsItems,
+          };
   
       case actionType.SET_CART_SHOW:
         return {

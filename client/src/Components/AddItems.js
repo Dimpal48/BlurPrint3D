@@ -10,6 +10,9 @@ function AddItems() {
         <Link to={"/addservices"}>
            AddServices
         </Link>
+        <Link to={"/addblogs"}>
+           Create Blogs
+        </Link>
     </div>
   )
 }

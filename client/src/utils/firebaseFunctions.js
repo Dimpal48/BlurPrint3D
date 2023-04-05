@@ -14,5 +14,19 @@ export const getAllShopItems=async()=>{
     );
     return items.docs.map((doc)=> doc.data());
 }
+
+export const getAllServicesItems=async()=>{
+  const items =await getDocs(
+    query(collection(firestore,"ServicesItems"),orderBy("id","desc"))
+  );
+  return items.docs.map((doc)=> doc.data());
+}
+
+export const getAllBlogsItems=async()=>{
+  const items =await getDocs(
+    query(collection(firestore,"BlogsItems"),orderBy("id","desc"))
+  );
+  return items.docs.map((doc)=> doc.data());
+}
   
   
